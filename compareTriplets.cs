@@ -2,30 +2,46 @@
 
 namespace TestingConsoleApp
 {
-	static class compareTriplets
+	public static class compareTriplets
 	{
-
-
 		public static List<int> CompareTriplets(List<int> a, List<int> b)
 		{
-			List<int> result = new List<int>();
-			int alice = 0;
-			int bob = 0;
-
-			for (int i = 0; i < 3; i++)
+			int index = 0, bob = 0, alice = 0;
+			static List<int> callCompare(int index, List<int> a, List<int> b, int alice, int bob)
 			{
-				if (a[i] > b[i])
+				if (index == a.Count)
 				{
-					alice += 1;
+					return new List<int> { alice, bob };
 				}
-				else if (a[i] < b[i])
+				if (a[index] > b[index])
 				{
-					bob += 1;
+					alice++;
 				}
+				else if (a[index] < b[index])
+				{
+					bob++;
+				}
+				return callCompare(index += 1, a, b, bob, alice);
 			}
-			result.Add(alice);
-			result.Add(bob);
-			return result;
+			return callCompare(index, a, b, alice, bob); ;
 		}
+
+
+
 	}
 }
+
+
+//int alice = 0;
+//int bob = 0;
+//for (int i = 0; i < 3; i++)
+//{
+//	if (a[i] > b[i])
+//	{
+//		alice += 1;
+//	}
+//	else if (a[i] < b[i])
+//	{
+//		bob += 1;
+//	}
+//}

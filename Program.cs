@@ -1,4 +1,7 @@
-﻿namespace TestingConsoleApp
+﻿using System;
+using System.Collections.Generic;
+
+namespace TestingConsoleApp
 {
 	public class Program
 	{
@@ -18,8 +21,29 @@
 			VideoEncoder.VideoEncoded += messageService.Message;
 			VideoEncoder.Encode(video);
 			*/
-		}
+			// uses boxing DateTime timeValue = Convert.ToDateTime("01:00 PM");
+			DateTime timeValue = DateTime.Parse("01:00 PM");
+			Console.WriteLine(timeValue.ToString("HH:mm"));
+			List<int> a = new()
+			{
+				7,
+				71,
+				67,
+			};
+			List<int> b = new()
+			{
+				8,
+				71,
+				99,
+			};
+			//Console.WriteLine("result: " + GradeRounding.gradingStudents(value));
+			//Console.WriteLine("result: " + SecoundHighest.getSecondHighest(a));
 
+			var result = compareTriplets.CompareTriplets(a, b);
+			result.ForEach(x => Console.WriteLine("result: " + x));
+
+			//DependencyInversionPrinciple.getStarted();
+		}
 
 	}
 }
