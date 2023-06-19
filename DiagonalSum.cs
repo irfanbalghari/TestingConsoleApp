@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TestingConsoleApp
 {
-	internal class DiagonalSum
+	public class DiagonalSum
 	{
 		public DiagonalSum()
 		{
