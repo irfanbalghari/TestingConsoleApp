@@ -4,6 +4,7 @@ namespace TestingConsoleApp
 {
     public class breakingChangesInResult
     {
+       // Given an array of Ana's basketball scores all season, determine the number of times she breaks her best and worst records.
         public static List<int> breakingRecords(List<int> scores)
         {
             int hi = scores[0];

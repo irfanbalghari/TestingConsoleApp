@@ -1,13 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using TestingConsoleApp.File_Reading_utility;
 
 namespace TestingConsoleApp
 {
     public class Program
     {
 
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
+
+
+            utilityToReadAndRequest read1 = new ();
+                      await  read1.runAsync();
+
+
             // modiler_fizzbuzz.fizzBuzz(15);
             // RomanNumerical.Parse("I");
 
@@ -25,18 +33,20 @@ namespace TestingConsoleApp
             //	DateTime timeValue = DateTime.Parse("01:00 PM");
             //Console.WriteLine(timeValue.ToString("HH:mm"));
 
-            List<int> a = new()
-            {
-                7,
-                71,
-                67,
-            };
-            List<int> b = new()
-            {
-              8,
-                71,
-                99,
-            };
+            //List<int> a = new()
+            //{
+            //    7,
+            //    71,
+            //    67,
+            //};
+            //List<int> b = new()
+            //{
+            //  8,
+            //    71,
+            //    99,
+            //};
+
+
             //Console.WriteLine("result: " + GradeRounding.gradingStudents(value));
             //Console.WriteLine("result: " + SecoundHighest.getSecondHighest(a));
 
@@ -46,12 +56,14 @@ namespace TestingConsoleApp
             //DependencyInversionPrinciple.getStarted();
 
 
-            List<int> n = new()
-            {
-                10, 5, 20, 20, 4, 5, 2, 25, 1
-            };
-            var result = breakingChangesInResult.breakingRecords(n);
-            Console.WriteLine(result);
+            //List<int> n = new()
+            //{
+            //    10, 5, 20, 20, 4, 5, 2, 25, 1
+            //};
+            //var result = breakingChangesInResult.breakingRecords(n);
+            //foreach (var i in result)
+            //    Console.WriteLine(i);
+
 
         }
 
